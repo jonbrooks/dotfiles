@@ -20,3 +20,11 @@ alias grep='grep --color=auto'
 
 # Recursively remove .DS_Store files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
+
+#Lists aliases and functions defined in the shell
+alias listaliases="alias | sed 's/=.*//'"
+alias listfunctions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'" # show non _prefixed functions
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
