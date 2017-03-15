@@ -1,0 +1,12 @@
+packages: [
+  "busy-signal"
+  "docblockr"
+  "intentions"
+  "jshint"
+  "linter"
+  "linter-ui-default"
+  "merge-conflicts"
+  "package-sync"
+  "split-diff"
+  "toggle-quotes"
+]

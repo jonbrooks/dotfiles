@@ -1,0 +1,19 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "spell-check"
+    ]
+    telemetryConsent: "no"
+  editor:
+    invisibles: {}
+    showInvisibles: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "b9c60e78-3aac-41e3-71ae-7ee4fd3ee78c"
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  welcome:
+    showOnStartup: false

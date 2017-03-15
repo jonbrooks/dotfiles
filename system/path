@@ -1,0 +1,5 @@
+
+#!/usr/bin/env bash
+
+#Add npm to path
+export PATH="$HOME/.npm-packages/bin:$PATH"
