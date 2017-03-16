@@ -1,6 +1,7 @@
 "*":
   core:
     automaticallyUpdate: false
+    closeDeletedFileTabs: true
     disabledPackages: [
       "spell-check"
     ]
@@ -8,6 +9,7 @@
   editor:
     invisibles: {}
     showInvisibles: true
+    softWrap: true
     tabLength: 4
     tabType: "soft"
   "exception-reporting":
