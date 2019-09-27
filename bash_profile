@@ -18,3 +18,4 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 for file in "$DIR"/system/*; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+export PATH="/usr/local/opt/node@10/bin:$PATH"

@@ -1,0 +1,15 @@
+const helpers = require('./../utils/responseHelpers');
+const authentication = require('./../core/authentication');
+const factory = require('./../services/epubFactory/factory');
+const originator = require('./../utils/originator');
+
+module.exports.get = function (req, res) {
+    const origination = originator.createFromRequest(req);
+    const params = req.swagger.params;
+    const publishID = params.publishID.value;
+
+    authentication.authenticateForPublish(req.headers.authorization, publishID)
+        .then( () => factory.getFolderForPublish(params.publishID.value))
+        .then( result => helpers.returnSuccessWithJSON(result, res, origination))
+        .catch( error => helpers.returnErrorResponse(error, res, origination));
+};

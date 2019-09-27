@@ -30,3 +30,8 @@ alias listfunctions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'" # show non 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
+
+alias deleteMerged='git branch --merged master | grep -v "\* master" | grep -v "master"  | xargs -n 1 git branch -d'
+
+alias _parseGitInfo="grep -o 'Current Rev:.*' | sed 's/Current Rev:[ ]*//'"
+alias showHeraclesUndeployed='git log `curl https://dleheracles.mheducation.com/git_info.txt | _parseGitInfo`..'

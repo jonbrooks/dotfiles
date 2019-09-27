@@ -1,6 +1,12 @@
 packages: [
+  "atom-beautify"
+  "busy-signal"
   "docblockr"
+  "intentions"
   "jshint"
+  "linter"
+  "linter-eslint"
+  "linter-ui-default"
   "merge-conflicts"
   "package-sync"
   "split-diff"

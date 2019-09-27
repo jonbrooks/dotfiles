@@ -1,9 +1,12 @@
 "*":
+  "atom-package-deps":
+    ignored: []
   core:
     automaticallyUpdate: false
     closeDeletedFileTabs: true
     disabledPackages: [
       "spell-check"
+      "jshint"
     ]
     telemetryConsent: "no"
   editor:
@@ -14,6 +17,11 @@
     tabType: "soft"
   "exception-reporting":
     userId: "b9c60e78-3aac-41e3-71ae-7ee4fd3ee78c"
+  "linter-eslint":
+    disabling:
+      disableWhenNoEslintConfig: false
+    global: {}
+  "linter-ui-default": {}
   "package-sync":
     createOnChange: true
     forceOverwrite: true
