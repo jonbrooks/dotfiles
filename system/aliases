@@ -35,3 +35,5 @@ alias deleteMerged='git branch --merged master | grep -v "\* master" | grep -v "
 
 alias _parseGitInfo="grep -o 'Current Rev:.*' | sed 's/Current Rev:[ ]*//'"
 alias showHeraclesUndeployed='git log `curl https://dleheracles.mheducation.com/git_info.txt | _parseGitInfo`..'
+
+alias prettyjson='python -m json.tool'

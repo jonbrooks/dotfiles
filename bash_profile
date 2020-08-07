@@ -18,4 +18,8 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 for file in "$DIR"/system/*; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+#export PATH="/usr/local/opt/node@10/bin:~/.rbenv/shims:$PATH"
+export PATH="/usr/local/opt/node@12/bin:~/.rbenv/shims:$PATH"
+
+#initialize rbenv, which sets ruby to be the one set by rbenv (currently 2.6.x)
+eval "$(rbenv init -)"
