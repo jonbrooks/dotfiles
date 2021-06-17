@@ -36,4 +36,9 @@ alias deleteMerged='git branch --merged master | grep -v "\* master" | grep -v "
 alias _parseGitInfo="grep -o 'Current Rev:.*' | sed 's/Current Rev:[ ]*//'"
 alias showHeraclesUndeployed='git log `curl https://dleheracles.mheducation.com/git_info.txt | _parseGitInfo`..'
 
-alias prettyjson='python -m json.tool'
+#no need for this - jq is better
+#alias prettyjson='python -m json.tool'
+
+#removes jwt auth header from pasteboard contents
+alias pbclean='pbpaste | sed "s/Bearer [^\"]*/\.\.\./" | pbcopy'
+
