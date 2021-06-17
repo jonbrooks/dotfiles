@@ -41,3 +41,14 @@ function dataurl() {
 	fi
 	echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
 }
+
+# Take pasteboard contents assumed to be a jwt and output the payload
+# relies on pbpaste and jq
+function pbjwt() {
+  local input=`pbpaste`
+  local regex="^[^\.]+\.([^\.]+)\.*."
+
+  [[ $input =~ $regex ]] && local payload=${BASH_REMATCH[1]}
+  local json=`echo $payload | base64 -d`
+  echo "$json}" | jq
+}
