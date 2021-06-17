@@ -23,3 +23,6 @@ export PATH="/usr/local/opt/node@12/bin:~/.rbenv/shims:$PATH"
 
 #initialize rbenv, which sets ruby to be the one set by rbenv (currently 2.6.x)
 eval "$(rbenv init -)"
+
+alias adi="aws-vault exec default"
+alias acv="aws-vault exec prod"
