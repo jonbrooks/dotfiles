@@ -1,0 +1,30 @@
+[user]
+	name = Jon Brooks
+	email = ...
+
+[diff]
+    tool = "opendiff"
+
+[difftool]
+    prompt = false
+
+[difftool "twdiff"]
+    cmd = /usr/bin/twdiff --wait --resume "$LOCAL" "$REMOTE"
+
+[push]
+	default = current
+[core]
+	whitespace = cr-at-eol
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[alias]
+	tree = log --oneline --decorate --all --graph
+[status]
+	submoduleSummary = true
+[hub]
+	host = github.mheducation.com
+[pull]
+	rebase = false
