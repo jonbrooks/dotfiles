@@ -20,6 +20,12 @@ for file in "$DIR"/system/*; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+
+autoload -Uz compinit && compinit
+
 #initialize rbenv, which sets ruby to be the one set by rbenv (currently 2.7.x)
 eval "$(rbenv init -)"
 
